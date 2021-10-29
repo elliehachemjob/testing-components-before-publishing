@@ -18,6 +18,8 @@ function App() {
   const [avatarName, setAvatarName] = useState<string>("Avatar Name");
   const [status, setStatus] = useState<string>("dnd");
   const [clientResponder, setClientResponder] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
   const [avatarIco, setAvatarIco] = useState<string>(
     "https://banner2.cleanpng.com/20180418/ppw/kisspng-client-computer-icons-clip-art-5ad79ac15eb3e0.5159876515240792973879.jpg"
   );
@@ -26,6 +28,8 @@ function App() {
     isAdmin: string,
     message: string
   ) => {};
+  const joinRoom = async (user: string) => {};
+
   interface message {
     message: string;
   }
@@ -74,6 +78,13 @@ function App() {
         avatarIco=""
         clientMsgs={[]}
       /> */}
+      <LoginForm
+        joinRoom={joinRoom}
+        user={user}
+        setUser={setUser}
+        password={password}
+        setPassword={setPassword}
+      />
     </div>
   );
 }
