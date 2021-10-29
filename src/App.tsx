@@ -17,12 +17,18 @@ function App() {
   const [username, setUsername] = useState<string>("");
   const [avatarName, setAvatarName] = useState<string>("Avatar Name");
   const [status, setStatus] = useState<string>("dnd");
-
+  const [clientResponder, setClientResponder] = useState<string>("");
+  const [avatarIco, setAvatarIco] = useState<string>(
+    "https://banner2.cleanpng.com/20180418/ppw/kisspng-client-computer-icons-clip-art-5ad79ac15eb3e0.5159876515240792973879.jpg"
+  );
   const sendMessage = async (
     user: string,
     isAdmin: string,
     message: string
   ) => {};
+  interface message {
+    message: string;
+  }
 
   return (
     <div className="App">
@@ -43,7 +49,7 @@ function App() {
         username={username}
         // chatListAppend={[]}
         sendMessage={sendMessage}
-        avatarIco="https://banner2.cleanpng.com/20180418/ppw/kisspng-client-computer-icons-clip-art-5ad79ac15eb3e0.5159876515240792973879.jpg"
+        avatarIco={avatarIco}
         onAttachClick={() => {
           console.log("What to do when someone press the send attachment");
         }}
@@ -57,6 +63,17 @@ function App() {
         avatarName={avatarName}
         status={status}
       />
+      {/* <AdminPanelFilled
+        setClientResponder={setClientResponder}
+        setUsername={setUsername}
+        username={username}
+        chatListMapping={[]}
+        clientMessageArray={[]}
+        adminMessageArray={[]}
+        sendMessage={sendMessage}
+        avatarIco=""
+        clientMsgs={[]}
+      /> */}
     </div>
   );
 }
