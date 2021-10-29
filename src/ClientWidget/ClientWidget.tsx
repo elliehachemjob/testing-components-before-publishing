@@ -9,7 +9,11 @@ import normalImage from "./flippedImage.png";
 interface Props {
   isWidget: boolean;
   setIsWidget: (active: boolean) => void;
-  sendMessage: (user: string, isAdmin: string) => Promise<void>;
+  sendMessage: (
+    user: string,
+    isAdmin: string,
+    message: string
+  ) => Promise<void>;
   normalImage?: string;
   flippedImage?: string;
   normalImageAlt?: string;

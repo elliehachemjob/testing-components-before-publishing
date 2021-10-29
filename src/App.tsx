@@ -12,9 +12,17 @@ import { VoiceCall } from "./VoiceCall";
 function App() {
   const [isWidget, setIsWidget] = useState<boolean>(false);
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [message, setMessage] = useState<boolean>(false);
   const [user, setUser] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [avatarName, setAvatarName] = useState<string>("Avatar Name");
+  const [status, setStatus] = useState<string>("dnd");
 
-  const sendMessage = async (user: string, isAdmin: string) => {};
+  const sendMessage = async (
+    user: string,
+    isAdmin: string,
+    message: string
+  ) => {};
 
   return (
     <div className="App">
@@ -30,6 +38,24 @@ function App() {
         flippedImageStyle=""
         title="Custom Title Ellie"
         subtitle="Welcome to New Extracted Component"
+      />
+      <AdminPanel
+        username={username}
+        // chatListAppend={[]}
+        sendMessage={sendMessage}
+        avatarIco="https://banner2.cleanpng.com/20180418/ppw/kisspng-client-computer-icons-clip-art-5ad79ac15eb3e0.5159876515240792973879.jpg"
+        onAttachClick={() => {
+          console.log("What to do when someone press the send attachment");
+        }}
+        onChange={() => {
+          console.log("even handler for onChangeEvent");
+        }}
+        sidebarPosition="right"
+        sidebarScrollable={false}
+        // mainDivstyle=""
+        // messageListContentStyle=""
+        avatarName={avatarName}
+        status={status}
       />
     </div>
   );
