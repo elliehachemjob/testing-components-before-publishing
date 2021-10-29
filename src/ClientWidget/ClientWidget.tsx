@@ -25,10 +25,12 @@ export const ClientWidget: React.FC<Props> = (props: any): any => {
     if (props.isWidget) {
       return (
         <img
-          src={props.normalImage ? props.normalImage : normalImage}
-          alt={props.normalimageAlt ? props.normalimageAlt : "imageNot working"}
+          src={props.flippedImage ? props.flippedImage : flippedImage}
+          alt={
+            props.flippedimageAlt ? props.flippedimageAlt : "imageNot working"
+          }
           className={
-            props.normalImageStyle ? props.normalImageStyle : "rcw-launcher"
+            props.flippedImageStyle ? props.flippedImageStyle : "rcw-launcher"
           }
           onClick={() => {
             handleToggle();
@@ -39,12 +41,10 @@ export const ClientWidget: React.FC<Props> = (props: any): any => {
     } else {
       return (
         <img
-          src={props.flippedImage ? props.flippedImage : flippedImage}
-          alt={
-            props.flippedimageAlt ? props.flippedimageAlt : "imageNot working"
-          }
+          src={props.normalImage ? props.normalImage : normalImage}
+          alt={props.normalimageAlt ? props.normalimageAlt : "imageNot working"}
           className={
-            props.flippedImageStyle ? props.flippedImageStyle : "rcw-launcher"
+            props.normalImageStyle ? props.normalImageStyle : "rcw-launcher"
           }
           onClick={() => {
             handleToggle();
