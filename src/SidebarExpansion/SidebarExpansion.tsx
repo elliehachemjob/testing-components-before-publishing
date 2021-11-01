@@ -1,19 +1,20 @@
+/* eslint-disable no-unused-expressions */
 import {
   ExpansionPanel,
   Sidebar,
   // @ts-ignore
-} from '@chatscope/chat-ui-kit-react';
-import React from 'react';
-import './App.css';
-import './styles.css';
+} from "@chatscope/chat-ui-kit-react";
+import React from "react";
+import "./App.css";
+import "./styles.css";
 
 interface Props {
   title: string;
-  position: string;
-  expanstionPanelData1?: any;
-  expanstionPanelData2?: any;
-  expanstionPanelData3?: any;
-  expanstionPanelData4?: any;
+  position?: string;
+  expanstionPanelData1?: string;
+  expanstionPanelData2?: string;
+  expanstionPanelData3?: string;
+  expanstionPanelData4?: string;
   onClickExpanstionPanelData1?: () => void;
   onClickExpanstionPanelData2?: () => void;
   onClickExpanstionPanelData3?: () => void;
@@ -22,42 +23,42 @@ interface Props {
 
 export const SidebarExpansion: React.FC<Props> = (props: any): any => {
   return (
-    <Sidebar position={!props.position ? 'right' : props.position}>
-      <ExpansionPanel open title={!props.title ? 'Info' : props.title}>
+    <Sidebar position={!props.position ? "right" : props.position}>
+      <ExpansionPanel open title={!props.title ? "Info" : props.title}>
         <p
           onClick={() => {
-            props.onClickExpanstionPanelData1;
+            props.onClickExpanstionPanelData1();
           }}
         >
           {!props.expanstionPanelData1
-            ? 'dynamic data'
+            ? "dynamic data"
             : props.expanstionPanelData1}
         </p>
         <p
           onClick={() => {
-            props.onClickExpanstionPanelData2;
+            props.onClickExpanstionPanelData2();
           }}
         >
           {!props.expanstionPanelData2
-            ? 'dynamic data'
+            ? "dynamic data"
             : props.expanstionPanelData2}
         </p>
         <p
           onClick={() => {
-            props.onClickExpanstionPanelData3;
+            props.onClickExpanstionPanelData3();
           }}
         >
           {!props.expanstionPanelData3
-            ? 'dynamic data'
+            ? "dynamic data"
             : props.expanstionPanelData3}
         </p>
         <p
           onClick={() => {
-            props.onClickExpanstionPanelData4;
+            props.onClickExpanstionPanelData4();
           }}
         >
           {!props.expanstionPanelData4
-            ? 'dynamic data'
+            ? "dynamic data"
             : props.expanstionPanelData4}
         </p>
       </ExpansionPanel>

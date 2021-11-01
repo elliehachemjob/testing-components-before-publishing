@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Field,
   Control,
@@ -12,15 +12,15 @@ import {
   Label,
   Checkbox,
   Button,
-} from 'rbx';
+} from "rbx";
 import {
   faCheck,
   faEnvelope,
   faLock,
   faArrowRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './App.css';
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./App.css";
 
 interface LoginProps {
   joinRoom: (user: string) => Promise<void>;
@@ -53,30 +53,30 @@ interface LoginProps {
 export const LoginForm: React.FC<LoginProps> = (props: any): any => {
   return (
     <Level>
-      <Level.Item textAlign={props.textAlign ? props.textAlign : 'centered'}>
+      <Level.Item textAlign={props.textAlign ? props.textAlign : "centered"}>
         <Container
           style={
             props.containerStyle
               ? props.containerStyle
               : {
                   maxWidth: 400,
-                  height: '100vh',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
+                  height: "100vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
                 }
           }
         >
           <Card>
             <Section
               backgroundColor={
-                props.titleBackground ? props.titleBackground : 'primary'
+                props.titleBackground ? props.titleBackground : "primary"
               }
             >
               <Title
-                style={props.titleColor ? props.titleColor : { color: 'white' }}
+                style={props.titleColor ? props.titleColor : { color: "white" }}
               >
-                {props.title ? props.title : 'Plugit Support Login'}
+                {props.title ? props.title : "Plugit Support Login"}
               </Title>
             </Section>
             <Card.Content>
@@ -88,20 +88,20 @@ export const LoginForm: React.FC<LoginProps> = (props: any): any => {
                   }
                 >
                   <Input
-                    type={props.fieldOneType ? props.fieldOneType : 'email'}
+                    type={props.fieldOneType ? props.fieldOneType : "email"}
                     placeholder={
                       props.fieldOnePlaceholder
                         ? props.fieldOnePlaceholder
-                        : 'email'
+                        : "email"
                     }
                     value={props.user}
                     onChange={(e: any) => props.setUser(e.target.value)}
                   />
 
                   <Icon
-                    size={props.faEnvelopeSize ? props.faEnvelopeSize : 'small'}
+                    size={props.faEnvelopeSize ? props.faEnvelopeSize : "small"}
                     align={
-                      props.faEnvelopeAlign ? props.faEnvelopeAlign : 'left'
+                      props.faEnvelopeAlign ? props.faEnvelopeAlign : "left"
                     }
                   >
                     <FontAwesomeIcon
@@ -111,9 +111,9 @@ export const LoginForm: React.FC<LoginProps> = (props: any): any => {
                     />
                   </Icon>
                   <Icon
-                    size={props.checkIconSize ? props.checkIconSize : 'small'}
+                    size={props.checkIconSize ? props.checkIconSize : "small"}
                     align={
-                      props.checkIconAlign ? props.checkIconAlign : 'right'
+                      props.checkIconAlign ? props.checkIconAlign : "right"
                     }
                   >
                     <FontAwesomeIcon
@@ -129,18 +129,18 @@ export const LoginForm: React.FC<LoginProps> = (props: any): any => {
                   }
                 >
                   <Input
-                    type={props.fieldTwoType ? props.fieldTwoType : 'password'}
+                    type={props.fieldTwoType ? props.fieldTwoType : "password"}
                     placeholder={
                       props.fieldTwoPlaceholder
                         ? props.fieldTwoPlaceholder
-                        : 'password'
+                        : "password"
                     }
                     onChange={(e: any) => props.setPassword(e.target.value)}
                     value={props.password}
                   />
                   <Icon
-                    size={props.faLockSize ? props.faLockSize : 'small'}
-                    align={props.faLockAlign ? props.faLockAlign : 'left'}
+                    size={props.faLockSize ? props.faLockSize : "small"}
+                    align={props.faLockAlign ? props.faLockAlign : "left"}
                   >
                     <FontAwesomeIcon
                       icon={props.fieldTwoIcon ? props.fieldTwoIcon : faLock}
@@ -152,7 +152,7 @@ export const LoginForm: React.FC<LoginProps> = (props: any): any => {
                 <Control>
                   <Label>
                     <Checkbox />
-                    {props.rememberMe ? props.rememberMe : 'Remember me'}
+                    {props.rememberMe ? props.rememberMe : "Remember me"}
                   </Label>
                   <Label></Label>
                 </Control>
@@ -167,7 +167,7 @@ export const LoginForm: React.FC<LoginProps> = (props: any): any => {
                   >
                     {props.loginHandlertitle
                       ? props.loginHandlertitle
-                      : 'Login'}
+                      : "Login"}
                   </Button>
                 </Control>
               </Field>
@@ -185,6 +185,7 @@ interface SignUpProps {
   setUser: (active: string) => void;
   password: string;
   setPassword: (active: string) => void;
+  signUpHandler: () => void;
   title?: string;
   fieldOneType?: string;
   fieldOnePlaceholder?: string;
@@ -207,36 +208,35 @@ interface SignUpProps {
   setSendEmailVerification?: (active: string) => void;
   fieldThreeType?: string;
   fieldThreePlaceholder?: string;
-  signUpHandler?: () => void;
   fieldThreeIcon?: any;
 }
 export const SignUpForm: React.FC<SignUpProps> = (props: any): any => {
   return (
     <Level>
-      <Level.Item textAlign={props.textAlign ? props.textAlign : 'centered'}>
+      <Level.Item textAlign={props.textAlign ? props.textAlign : "centered"}>
         <Container
           style={
             props.containerStyle
               ? props.containerStyle
               : {
                   maxWidth: 400,
-                  height: '100vh',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
+                  height: "100vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
                 }
           }
         >
           <Card>
             <Section
               backgroundColor={
-                props.titleBackground ? props.titleBackground : 'primary'
+                props.titleBackground ? props.titleBackground : "primary"
               }
             >
               <Title
-                style={props.titleColor ? props.titleColor : { color: 'white' }}
+                style={props.titleColor ? props.titleColor : { color: "white" }}
               >
-                {props.title ? props.title : 'Plugit Support Sign Up'}
+                {props.title ? props.title : "Plugit Support Sign Up"}
               </Title>
             </Section>
             <Card.Content>
@@ -248,20 +248,20 @@ export const SignUpForm: React.FC<SignUpProps> = (props: any): any => {
                   }
                 >
                   <Input
-                    type={props.fieldOneType ? props.fieldOneType : 'email'}
+                    type={props.fieldOneType ? props.fieldOneType : "email"}
                     placeholder={
                       props.fieldOnePlaceholder
                         ? props.fieldOnePlaceholder
-                        : 'email'
+                        : "email"
                     }
                     value={props.user}
                     onChange={(e: any) => props.setUser(e.target.value)}
                   />
 
                   <Icon
-                    size={props.faEnvelopeSize ? props.faEnvelopeSize : 'small'}
+                    size={props.faEnvelopeSize ? props.faEnvelopeSize : "small"}
                     align={
-                      props.faEnvelopeAlign ? props.faEnvelopeAlign : 'left'
+                      props.faEnvelopeAlign ? props.faEnvelopeAlign : "left"
                     }
                   >
                     <FontAwesomeIcon
@@ -271,9 +271,9 @@ export const SignUpForm: React.FC<SignUpProps> = (props: any): any => {
                     />
                   </Icon>
                   <Icon
-                    size={props.checkIconSize ? props.checkIconSize : 'small'}
+                    size={props.checkIconSize ? props.checkIconSize : "small"}
                     align={
-                      props.checkIconAlign ? props.checkIconAlign : 'right'
+                      props.checkIconAlign ? props.checkIconAlign : "right"
                     }
                   >
                     <FontAwesomeIcon
@@ -289,18 +289,18 @@ export const SignUpForm: React.FC<SignUpProps> = (props: any): any => {
                   }
                 >
                   <Input
-                    type={props.fieldTwoType ? props.fieldTwoType : 'password'}
+                    type={props.fieldTwoType ? props.fieldTwoType : "password"}
                     placeholder={
                       props.fieldTwoPlaceholder
                         ? props.fieldTwoPlaceholder
-                        : 'password'
+                        : "password"
                     }
                     onChange={(e: any) => props.setPassword(e.target.value)}
                     value={props.password}
                   />
                   <Icon
-                    size={props.faLockSize ? props.faLockSize : 'small'}
-                    align={props.faLockAlign ? props.faLockAlign : 'left'}
+                    size={props.faLockSize ? props.faLockSize : "small"}
+                    align={props.faLockAlign ? props.faLockAlign : "left"}
                   >
                     <FontAwesomeIcon
                       icon={props.fieldTwoIcon ? props.fieldTwoIcon : faLock}
@@ -311,13 +311,11 @@ export const SignUpForm: React.FC<SignUpProps> = (props: any): any => {
               <Field>
                 <Control iconLeft>
                   <Input
-                    type={
-                      props.fieldThreeType ? props.fieldThreeType : 'password'
-                    }
+                    type={props.fieldThreeType ? props.fieldThreeType : "email"}
                     placeholder={
                       props.fieldThreePlaceholder
                         ? props.fieldThreePlaceholder
-                        : 'Send Email Verification'
+                        : "Send Email Verification"
                     }
                     onChange={(e: any) =>
                       props.setSendEmailVerification(e.target.value)
@@ -345,7 +343,7 @@ export const SignUpForm: React.FC<SignUpProps> = (props: any): any => {
                   >
                     {props.signUpHandlertitle
                       ? props.signUpHandlertitle
-                      : 'SignUp'}
+                      : "SignUp"}
                   </Button>
                 </Control>
               </Field>

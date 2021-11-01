@@ -1,13 +1,12 @@
 // @ts-ignore
 
-import { ExpansionPanel } from '@chatscope/chat-ui-kit-react';
-import React from 'react';
-import './App.css';
-import './styles.css';
+import { ExpansionPanel } from "@chatscope/chat-ui-kit-react";
+import React from "react";
+import "./App.css";
+import "./styles.css";
 
 interface Props {
   title: string;
-  position: string;
   expanstionPanelData1?: any;
   expanstionPanelData2?: any;
   expanstionPanelData3?: any;
@@ -20,41 +19,45 @@ interface Props {
 
 export const ExpansionAdminPanel: React.FC<Props> = (props: any): any => {
   return (
-    <ExpansionPanel open title={!props.title ? 'Info' : props.title}>
+    <ExpansionPanel open title={!props.title ? "Info" : props.title}>
       <p
+        // @ts-ignore
         onClick={() => {
-          props.onClickExpanstionPanelData1;
+          props.onClickExpanstionPanelData1();
         }}
       >
         {!props.expanstionPanelData1
-          ? 'dynamic data'
+          ? "dynamic data"
           : props.expanstionPanelData1}
       </p>
       <p
+        // @ts-ignore
         onClick={() => {
-          props.onClickExpanstionPanelData2;
+          props.onClickExpanstionPanelData2();
         }}
       >
         {!props.expanstionPanelData2
-          ? 'dynamic data'
+          ? "dynamic data"
           : props.expanstionPanelData2}
       </p>
       <p
+        // @ts-ignore
         onClick={() => {
-          props.onClickExpanstionPanelData3;
+          props.onClickExpanstionPanelData3();
         }}
       >
         {!props.expanstionPanelData3
-          ? 'dynamic data'
+          ? "dynamic data"
           : props.expanstionPanelData3}
       </p>
       <p
+        // @ts-ignore
         onClick={() => {
-          props.onClickExpanstionPanelData4;
+          props.onClickExpanstionPanelData4();
         }}
       >
         {!props.expanstionPanelData4
-          ? 'dynamic data'
+          ? "dynamic data"
           : props.expanstionPanelData4}
       </p>
     </ExpansionPanel>
