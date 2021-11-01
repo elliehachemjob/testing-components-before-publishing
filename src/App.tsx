@@ -3,8 +3,8 @@ import "./App.css";
 import { ClientWidget } from "./ClientWidget";
 import { AdminPanel } from "./AdminPanel";
 import { AdminPanelFilled } from "./AdminPanelFilled";
-import { ExpansionAdminPanel } from "./ExpansionAdminPanel";
 import { LoginForm, SignUpForm } from "./Forms";
+import { ExpansionAdminPanel } from "./ExpansionAdminPanel";
 import { SidebarExpansion } from "./SidebarExpansion";
 import { VideoCall } from "./VideoCall";
 import { VoiceCall } from "./VoiceCall";
@@ -34,9 +34,13 @@ function App() {
     message: string;
   }
 
+  const loginHandler = () => {
+    console.log("replace this console.log with  a function here");
+  };
+
   return (
     <div className="App">
-      <ClientWidget
+      {/* <ClientWidget
         isWidget={isWidget}
         setIsWidget={setIsWidget}
         sendMessage={sendMessage}
@@ -66,7 +70,7 @@ function App() {
         // messageListContentStyle=""
         avatarName={avatarName}
         status={status}
-      />
+      /> */}
       {/* <AdminPanelFilled
         setClientResponder={setClientResponder}
         setUsername={setUsername}
@@ -78,7 +82,34 @@ function App() {
         avatarIco=""
         clientMsgs={[]}
       /> */}
-      <LoginForm
+      {/* <LoginForm
+        joinRoom={joinRoom}
+        user={user}
+        setUser={setUser}
+        password={password}
+        setPassword={setPassword}
+        loginHandler={loginHandler}
+        title="change title as you please here in title props"
+        fieldOneType="email"
+        fieldOnePlaceholder="fieldOnePlaceholder/type usually email"
+        containerStyle=""
+        fieldOneIcon=""
+        fieldTwoIcon=""
+        textAlign="center"
+        loginHandlertitle="Login"
+        rememberMe="rememberMe"
+        checkIcon=""
+        titleColor=""
+        fieldTwoIconLeft={true}
+        titleBackground=""
+        fieldTwoType=""
+        fieldTwoPlaceholder=""
+        checkIconSize=""
+        checkIconAlign=""
+        faEnvelopeSize=""
+        faEnvelopeAlign=""
+      /> */}
+      <SignUpForm
         joinRoom={joinRoom}
         user={user}
         setUser={setUser}
