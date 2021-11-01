@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="App">
-      <AdminPanel
+      {/* <AdminPanel
         username={username}
         // chatListAppend={[]}
         sendMessage={sendMessage}
@@ -97,7 +97,7 @@ function App() {
         // messageListContentStyle=""
         avatarName={avatarName}
         status={status}
-      />
+      /> */}
       {/* <AdminPanelFilled
         setClientResponder={setClientResponder}
         setUsername={setUsername}
